@@ -1,0 +1,15 @@
+.inputTask {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 1em;
+  width: 21em;
+  height: 2.5em;
+}
+
+.inputButton {
+  width: 21.5em;
+  margin-top: 1em;
+}
