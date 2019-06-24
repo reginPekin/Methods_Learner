@@ -1,0 +1,26 @@
+/* .app {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-width: 100%;
+  background-color: brown;
+  height: 100%;
+  width: 100%;
+}
+
+.methodsList {
+  flex-basis: 30%;
+}
+
+.taskBoard {
+  flex-grow: 1;
+  align-self: stretch;
+} */
+
+.app {
+  display: grid;
+  grid-template-columns: 5fr 12fr;
+  justify-items: stretch;
+  height: 100%;
+  width: 100%;
+}
