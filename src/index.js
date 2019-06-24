@@ -1,12 +1,74 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { store } from "./Components/Redux";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "./style/index.css";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import { App } from "./Components/App";
+
+const methods = [
+  {
+    name: "sort",
+    id: 0,
+    tasks: [
+      {
+        taskName: "Task #1",
+        id: 0,
+        codeExample: "pad",
+        answer: "pad"
+      },
+      {
+        taskName: "Task #2",
+        id: 1,
+        codeExample: "ort",
+        answer: "ort"
+      }
+    ]
+  },
+  {
+    name: "Method #2",
+    id: 1,
+    tasks: [
+      {
+        taskName: "Task #1",
+        id: 0,
+        codeExample: "123",
+        answer: "123"
+      },
+      {
+        taskName: "Task #2",
+        id: 1,
+        codeExample: "456",
+        answer: "456"
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Method #3",
+    tasks: [
+      {
+        taskName: "Task #1",
+        id: 0,
+        codeExample: "asd",
+        answer: "asd"
+      },
+      {
+        taskName: "Task #2",
+        id: 1,
+        codeExample: "dsa",
+        answer: "dsa"
+      }
+    ]
+  }
+];
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App methods={methods} />
+  </Provider>,
+  document.getElementById("root")
+);
+
+// ReactDOM.render(<Redux />, document.getElementById("root"));

@@ -1,0 +1,14 @@
+.methodsList {
+  background-color: var(--red);
+  height: 100%;
+}
+
+.method {
+  background-color: #858585;
+  padding: 0.4em;
+  margin: 0.5em 1.3em 0.5em 0.5em;
+  color: white;
+  border-radius: 2px;
+  border-color: var(--red);
+  font-size: 1em;
+}

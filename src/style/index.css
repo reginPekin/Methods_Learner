@@ -1,0 +1,17 @@
+:root,
+html,
+body,
+element {
+  --red: #e76165;
+  --yellow: #f3bc13;
+  --dark-blue: #1e3747;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+html,
+body,
+#root {
+  font-family: "Helvetica";
+}

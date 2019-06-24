@@ -1,0 +1,11 @@
+.method {
+  background-color: white;
+  padding: 0.4em;
+  margin: 1em 1.3em 0.5em 2em;
+  width: 15em;
+  height: 4em;
+  color: var(--red);
+  border-radius: 2px;
+  border-color: white;
+  font-size: 1em;
+}
