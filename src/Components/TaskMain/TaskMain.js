@@ -3,6 +3,10 @@ import { connect } from "react-redux";
 
 import { TaskBoard } from "../TaskBoard";
 
+// import Arrow from "../../images/arrow.png";
+import Left from "../../images/left-arrow.png";
+import Right from "../../images/right-arrow.png";
+
 import styles from "./TaskMain.module.css";
 
 export const TaskMainContainer = ({ methods, methodId, taskId, dispatch }) => {
@@ -22,19 +26,28 @@ export const TaskMainContainer = ({ methods, methodId, taskId, dispatch }) => {
     return null;
   }
   return (
-    <div className={styles.mainTaskBoard}>
-      <div className={styles.taskBoard}>
-        <div className={styles.name}>{task.taskName}</div>
-        <div className={styles.boardAndButtons}>
-          {method.tasks[taskId - 1] !== undefined && (
+    // <div>
+    <main className={styles.taskBoard}>
+      <div className={styles.name}>{task.taskName}</div>
+      <div className={styles.boardAndButtons}>
+        <section className={styles.nextPrev}>
+          {taskId !== 0 && (
             <button
+              className={styles.bottonArrow}
               onClick={() => {
                 dispatch({ type: "CHANGE_TASK", id: taskId - 1 });
               }}
             >
-              Previous
+              <img
+                src={Left}
+                alt="arrow-left"
+                onClick={() => console.log("CLICKED")}
+                style={{ width: "55px" }}
+              />
             </button>
           )}
+        </section>
+        <div className={styles.taskBoardComponent}>
           <TaskBoard
             task={task}
             winnerStyle={winnerStyle}
@@ -59,18 +72,27 @@ export const TaskMainContainer = ({ methods, methodId, taskId, dispatch }) => {
               }
             }}
           />
+        </div>
+        <section className={styles.nextPrev}>
           {method.tasks[taskId + 1] !== undefined && (
             <button
+              className={styles.bottonArrow}
               onClick={() => {
                 dispatch({ type: "CHANGE_TASK", id: taskId + 1 });
               }}
             >
-              Next
+              <img
+                src={Right}
+                alt="arrow-right"
+                onClick={() => console.log("CLICKED")}
+                style={{ width: "55px" }}
+              />
             </button>
           )}
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
+    // </div>
   );
 };
 
