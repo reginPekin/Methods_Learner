@@ -1,23 +1,35 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 
 import styles from "./MethodsList.module.css";
 
 import { Method } from "../Method";
-import { TaskSelection } from "../TaskSelection";
 
-export const MethodsList = ({ methods }) => {
+export const MethodsListContainer = ({ methods, dispatch }) => {
   const [openedId, setIsOpened] = useState(null);
   return (
     <section className={styles.methodsList}>
       {methods.map((method, key) => (
-        <div key={key}>
+        <div className={styles.flexForTasks} key={key}>
           <Method method={method} onClick={() => setIsOpened(method.id)} />
           {openedId === method.id &&
             method.tasks.map((task, taskKey) => (
-              <TaskSelection key={key + "." + taskKey} task={task} />
+              <button
+                className={styles.taskSelection}
+                onClick={() => {
+                  dispatch({ type: "CHANGE_TASK", id: task.id });
+                }}
+              >
+                {task.taskName}
+              </button>
             ))}
         </div>
       ))}
     </section>
   );
 };
+
+const mapStateToProps = state => ({
+  taskId: state.taskId
+});
+export const MethodsList = connect(mapStateToProps)(MethodsListContainer);
