@@ -1,11 +1,74 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { store } from "./Components/Redux";
+
+import "./style/index.css";
 
 import { App } from "./Components/App";
 
-const methods = {
-  id: 1,
-  answer: "123",
-  codeExample: "console.log(21)"
-};
-ReactDOM.render(<App methods={methods} />, document.getElementById("root"));
+const methods = [
+  {
+    name: "sort",
+    id: 0,
+    tasks: [
+      {
+        taskName: "Task #1",
+        id: 0,
+        codeExample: "pad",
+        answer: "pad"
+      },
+      {
+        taskName: "Task #2",
+        id: 1,
+        codeExample: "ort",
+        answer: "ort"
+      }
+    ]
+  },
+  {
+    name: "Method #2",
+    id: 1,
+    tasks: [
+      {
+        taskName: "Task #1",
+        id: 0,
+        codeExample: "123",
+        answer: "123"
+      },
+      {
+        taskName: "Task #2",
+        id: 1,
+        codeExample: "456",
+        answer: "456"
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Method #3",
+    tasks: [
+      {
+        taskName: "Task #1",
+        id: 0,
+        codeExample: "asd",
+        answer: "asd"
+      },
+      {
+        taskName: "Task #2",
+        id: 1,
+        codeExample: "dsa",
+        answer: "dsa"
+      }
+    ]
+  }
+];
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App methods={methods} />
+  </Provider>,
+  document.getElementById("root")
+);
+
+// ReactDOM.render(<Redux />, document.getElementById("root"));
