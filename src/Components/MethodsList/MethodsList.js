@@ -16,6 +16,7 @@ export const MethodsListContainer = ({ methods, dispatch }) => {
             method.tasks.map((task, taskKey) => (
               <button
                 className={styles.taskSelection}
+                key={taskKey}
                 onClick={() => {
                   dispatch({ type: "CHANGE_TASK", id: task.id });
                 }}
