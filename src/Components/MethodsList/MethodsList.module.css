@@ -3,16 +3,6 @@
   height: 100%;
 }
 
-.method {
-  background-color: #858585;
-  padding: 0.4em;
-  margin: 0.5em 1.3em 0.5em 0.5em;
-  color: white;
-  border-radius: 2px;
-  border-color: var(--red);
-  font-size: 1em;
-}
-
 .taskSelection {
   background-color: white;
   padding: 0.2em;
@@ -20,12 +10,32 @@
   width: 9em;
   height: 2em;
   color: var(--red);
-  border-radius: 2px;
+  border-radius: 10px;
   border-color: white;
   font-size: 0.8em;
+  outline: none;
 }
 
 .flexForTasks {
   display: flex;
   flex-direction: column;
+}
+
+.method {
+  background-color: white;
+  padding: 0.4em;
+  margin: 1em 1.3em 0.5em 2em;
+  width: 15em;
+  height: 4em;
+  color: var(--dark-blue);
+  border-radius: 15px;
+  border-color: white;
+  font-size: 1em;
+  outline: none;
+}
+
+.title {
+  font-size: 1.7em;
+  margin: 1em;
+  color: white;
 }

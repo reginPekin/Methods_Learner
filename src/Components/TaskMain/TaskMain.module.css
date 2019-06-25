@@ -5,8 +5,9 @@
 }
 
 .name {
-  margin: 1em 1em 0.5em 2em;
-  font-size: 1.8em;
+  margin: 1em 1em 0em 2em;
+  font-family: "Kosko";
+  font-size: 2em;
   font-weight: 600;
   color: var(--red);
 }
