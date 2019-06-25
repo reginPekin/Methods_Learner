@@ -10,14 +10,14 @@ export const ResultImage = ({ winnerStyle, loserStyle }) => {
     <div className={styles.divWinImg}>
       <img
         className={styles.winImg}
-        style={winnerStyle}
+        style={{ display: winnerStyle }}
         width="400px"
         src={Winner}
         alt="Winner"
       />
       <img
         className={styles.loseImg}
-        style={loserStyle}
+        style={{ display: loserStyle }}
         width="350px"
         src={Loser}
         alt="Loser"

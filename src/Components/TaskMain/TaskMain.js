@@ -9,16 +9,20 @@ import Right from "../../images/right-arrow.png";
 
 import styles from "./TaskMain.module.css";
 
-export const TaskMainContainer = ({ methods, methodId, taskId, dispatch }) => {
-  const [winnerStyle, setWinnerStyle] = useState({ display: "none" });
-  const [loserStyle, setLoserStyle] = useState({ display: "none" });
+export const TaskMainContainer = ({
+  methods,
+  methodId,
+  taskId,
+  dispatch,
+  displayWinner,
+  displayLoser
+}) => {
   const [text, setText] = useState("");
 
-  console.log("Methods:", methods);
   const method = methods[methodId];
 
-  console.log("Method:", method, methodId);
-  console.log("taskId:", taskId);
+  console.log("display", displayWinner);
+  console.log("display", displayLoser);
 
   const task = method.tasks[taskId];
 
@@ -50,26 +54,26 @@ export const TaskMainContainer = ({ methods, methodId, taskId, dispatch }) => {
         <div className={styles.taskBoardComponent}>
           <TaskBoard
             task={task}
-            winnerStyle={winnerStyle}
-            loserStyle={loserStyle}
+            winnerStyle={displayWinner}
+            loserStyle={displayLoser}
             value={text}
             onChange={event => setText(event.target.value)}
             onSubmit={event => {
               if (text.replace(/\s+/g, "") === task.answer) {
-                setWinnerStyle({ display: "flex" });
-                setLoserStyle({ display: "none" });
+                dispatch({ type: "CHANGE_DISPLAY_WINNER", display: "flex" });
+                dispatch({ type: "CHANGE_DISPLAY_LOSER", display: "none" });
                 setText("");
               } else {
-                setWinnerStyle({ display: "none" });
-                setLoserStyle({ display: "flex" });
+                dispatch({ type: "CHANGE_DISPLAY_WINNER", display: "none" });
+                dispatch({ type: "CHANGE_DISPLAY_LOSER", display: "flex" });
                 setText("");
               }
               event.preventDefault();
             }}
             onFocus={() => {
               if (text === "") {
-                setWinnerStyle({ display: "none" });
-                setLoserStyle({ display: "none" });
+                dispatch({ type: "CHANGE_DISPLAY_WINNER", display: "none" });
+                dispatch({ type: "CHANGE_DISPLAY_LOSER", display: "none" });
               }
             }}
           />
@@ -99,7 +103,9 @@ export const TaskMainContainer = ({ methods, methodId, taskId, dispatch }) => {
 
 const mapStateToProps = state => ({
   methodId: state.methodId,
-  taskId: state.taskId
+  taskId: state.taskId,
+  displayWinner: state.displayWinner,
+  displayLoser: state.displayLoser
 });
 
 export const TaskMain = connect(mapStateToProps)(TaskMainContainer);
