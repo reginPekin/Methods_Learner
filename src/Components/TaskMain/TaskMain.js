@@ -58,6 +58,7 @@ export const TaskMainContainer = ({ methods, methodId, taskId, dispatch }) => {
               if (text.replace(/\s+/g, "") === task.answer) {
                 setWinnerStyle({ display: "flex" });
                 setLoserStyle({ display: "none" });
+                setText("");
               } else {
                 setWinnerStyle({ display: "none" });
                 setLoserStyle({ display: "flex" });
