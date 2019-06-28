@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 
 import { TaskBoard } from "../TaskBoard";
 
+import { changeWinnerDisplay } from "../../Utils/changeWinnerDidplay";
+import { changeLoserDisplay } from "../../Utils/changeLoserDisplay";
+
 // import Arrow from "../../images/arrow.png";
 import Left from "../../images/left-arrow.png";
 import Right from "../../images/right-arrow.png";
@@ -20,9 +23,6 @@ export const TaskMainContainer = ({
   const [text, setText] = useState("");
 
   const method = methods[methodId];
-
-  console.log("display", displayWinner);
-  console.log("display", displayLoser);
 
   const task = method.tasks[taskId];
 
@@ -60,20 +60,20 @@ export const TaskMainContainer = ({
             onChange={event => setText(event.target.value)}
             onSubmit={event => {
               if (text.replace(/\s+/g, "") === task.answer) {
-                dispatch({ type: "CHANGE_DISPLAY_WINNER", display: "flex" });
-                dispatch({ type: "CHANGE_DISPLAY_LOSER", display: "none" });
+                dispatch(changeWinnerDisplay("flex"));
+                dispatch(changeLoserDisplay("none"));
                 setText("");
               } else {
-                dispatch({ type: "CHANGE_DISPLAY_WINNER", display: "none" });
-                dispatch({ type: "CHANGE_DISPLAY_LOSER", display: "flex" });
+                dispatch(changeWinnerDisplay("none"));
+                dispatch(changeLoserDisplay("flex"));
                 setText("");
               }
               event.preventDefault();
             }}
             onFocus={() => {
               if (text === "") {
-                dispatch({ type: "CHANGE_DISPLAY_WINNER", display: "none" });
-                dispatch({ type: "CHANGE_DISPLAY_LOSER", display: "none" });
+                dispatch(changeWinnerDisplay("none"));
+                dispatch(changeLoserDisplay("none"));
               }
             }}
           />

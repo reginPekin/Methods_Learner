@@ -3,22 +3,27 @@ import { connect } from "react-redux";
 
 import styles from "./MethodsList.module.css";
 
+import { changeWinnerDisplay } from "../../Utils/changeWinnerDidplay";
+import { changeLoserDisplay } from "../../Utils/changeLoserDisplay";
+import { changeMethod } from "../../Utils/changeMethod";
+import { changeTask } from "../../Utils/changeTask";
+
 export const MethodsListContainer = ({ methods, dispatch }) => {
   const [openedId, setIsOpened] = useState(null);
   return (
     <section className={styles.methodsList}>
-      <span className={styles.title}>Methods List</span>
+      <div className={styles.title}>Methods List</div>
       {methods.map((method, key) => (
         <div className={styles.flexForTasks} key={key}>
           <button
-            className={styles.method}
+            className={styles.methodSelection}
             method={method}
             onClick={() => {
               setIsOpened(method.id);
-              dispatch({ type: "CHANGE_DISPLAY_WINNER", display: "none" });
-              dispatch({ type: "CHANGE_DISPLAY_LOSER", display: "none" });
-              dispatch({ type: "CHANGE_METHOD", id: method.id });
-              dispatch({ type: "CHANGE_TASK", id: 0 });
+              dispatch(changeWinnerDisplay("none"));
+              dispatch(changeLoserDisplay("none"));
+              dispatch(changeMethod(method.id));
+              dispatch(changeTask(0));
             }}
           >
             {method.name}
@@ -29,9 +34,9 @@ export const MethodsListContainer = ({ methods, dispatch }) => {
                 className={styles.taskSelection}
                 key={taskKey}
                 onClick={() => {
-                  dispatch({ type: "CHANGE_TASK", id: task.id });
-                  dispatch({ type: "CHANGE_DISPLAY_WINNER", display: "none" });
-                  dispatch({ type: "CHANGE_DISPLAY_LOSER", display: "none" });
+                  dispatch(changeTask(task.id));
+                  dispatch(changeWinnerDisplay("none"));
+                  dispatch(changeLoserDisplay("none"));
                 }}
               >
                 {task.taskName}
