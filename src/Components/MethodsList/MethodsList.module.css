@@ -1,12 +1,42 @@
+.title {
+  font-size: 1.7em;
+  margin: 1em 1em 0.3em 1.5em;
+  color: white;
+}
+
 .methodsList {
   background-color: var(--red);
   height: 100%;
+  overflow: scroll;
+}
+
+/* .methodsList::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+} */
+
+.flexForTasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.methodSelection {
+  background-color: white;
+  padding: 0.4em;
+  margin: 1em 1.3em 0.5em 3em;
+  width: 15em;
+  height: 4em;
+  color: var(--dark-blue);
+  border-radius: 5px;
+  border-color: white;
+  font-size: 1em;
+  outline: none;
 }
 
 .taskSelection {
   background-color: white;
   padding: 0.2em;
-  margin: 0.3em 1.3em 0.5em 3em;
+  margin: 0.3em 1.3em 0.5em 4.5em;
   width: 9em;
   height: 2em;
   color: var(--red);
@@ -14,28 +44,4 @@
   border-color: white;
   font-size: 0.8em;
   outline: none;
-}
-
-.flexForTasks {
-  display: flex;
-  flex-direction: column;
-}
-
-.method {
-  background-color: white;
-  padding: 0.4em;
-  margin: 1em 1.3em 0.5em 2em;
-  width: 15em;
-  height: 4em;
-  color: var(--dark-blue);
-  border-radius: 15px;
-  border-color: white;
-  font-size: 1em;
-  outline: none;
-}
-
-.title {
-  font-size: 1.7em;
-  margin: 1em;
-  color: white;
 }
