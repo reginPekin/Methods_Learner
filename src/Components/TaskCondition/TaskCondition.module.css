@@ -1,13 +1,13 @@
 .task {
   display: flex;
   flex-direction: column;
-  background-color: var(--yellow);
+  background-color: var(--red);
   padding: 1em 2em 0.5em 1em;
   height: 10em;
   color: white;
   font-size: 1.5em;
-  border-radius: 20px 20px 0px 0px;
-  box-shadow: 0.1em 0.3em 0.3em 0em var(--dark-blue);
+  border-radius: 7px 7px 0px 0px;
+  /* box-shadow: 0.1em 0.3em 0.3em 0em var(--yellow); */
 }
 
 .taskCode {
@@ -18,7 +18,7 @@
   margin-top: 0.5em;
   padding-left: 1em;
   height: 100%;
-  color: var(--red);
+  color: var(--dark-blue);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -35,6 +35,6 @@
 }
 
 .span {
-  color: var(--dark-blue);
+  color: white;
   font-weight: 600;
 }
