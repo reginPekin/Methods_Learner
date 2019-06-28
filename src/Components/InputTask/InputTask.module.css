@@ -1,8 +1,8 @@
 .form {
-  background-color: var(--yellow);
+  background-color: var(--red);
   padding: 0em 3em 1em 1.5em;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0.1em 0.3em 0.3em 0em var(--dark-blue);
+  border-radius: 0 0 7px 7px;
+  /* box-shadow: 0.1em 0.3em 0.3em 0em var(--yellow); */
 }
 
 .inputTask {
@@ -12,7 +12,7 @@
 
 .input {
   margin-top: 1em;
-  width: 100%;
+  width: 60em;
   height: 2.5em;
   border: none;
   outline-color: var(--red);
