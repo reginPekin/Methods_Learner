@@ -6,6 +6,8 @@ import { TaskBoard } from "../TaskBoard";
 import { changeWinnerDisplay } from "../../Utils/changeWinnerDidplay";
 import { changeLoserDisplay } from "../../Utils/changeLoserDisplay";
 
+import Information from "../../images/information.png";
+
 // import Arrow from "../../images/arrow.png";
 import Left from "../../images/left-arrow.png";
 import Right from "../../images/right-arrow.png";
@@ -32,6 +34,15 @@ export const TaskMainContainer = ({
   return (
     // <div>
     <main className={styles.taskBoard}>
+      <section className={styles.hint}>
+        <div className={styles.hintText}>{method.hint}</div>
+        <img
+          width="30px"
+          height="30px"
+          src={Information}
+          alt="InformativeBlock"
+        />
+      </section>
       <div className={styles.name}>
         {method.name}: <span className={styles.taskName}>{task.taskName}</span>
       </div>
