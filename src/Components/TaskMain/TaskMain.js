@@ -32,7 +32,9 @@ export const TaskMainContainer = ({
   return (
     // <div>
     <main className={styles.taskBoard}>
-      <div className={styles.name}>{task.taskName}</div>
+      <div className={styles.name}>
+        {method.name}: <span className={styles.taskName}>{task.taskName}</span>
+      </div>
       <div className={styles.boardAndButtons}>
         <section className={styles.nextPrev}>
           {taskId !== 0 && (
