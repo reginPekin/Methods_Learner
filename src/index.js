@@ -27,7 +27,7 @@ const methods = [
     ]
   },
   {
-    name: "Method #2",
+    name: "method #2",
     id: 1,
     tasks: [
       {
@@ -46,7 +46,7 @@ const methods = [
   },
   {
     id: 2,
-    name: "Method #3",
+    name: "method #3",
     tasks: [
       {
         taskName: "Task #1",
