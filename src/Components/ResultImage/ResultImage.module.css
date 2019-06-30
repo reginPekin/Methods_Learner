@@ -1,5 +1,7 @@
-.divWinImg {
+.divImg {
   margin-top: 1em;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @-webkit-keyframes rotate-center {
