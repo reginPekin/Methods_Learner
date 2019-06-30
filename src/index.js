@@ -11,6 +11,7 @@ const methods = [
   {
     name: "sort",
     id: 0,
+    hint: "BlaBlaHint1",
     tasks: [
       {
         taskName: "Task #1",
@@ -29,6 +30,7 @@ const methods = [
   {
     name: "method #2",
     id: 1,
+    hint: "BlaBlaHint2",
     tasks: [
       {
         taskName: "Task #1",
@@ -47,6 +49,7 @@ const methods = [
   {
     id: 2,
     name: "method #3",
+    hint: "BlaBlaHint3",
     tasks: [
       {
         taskName: "Task #1",
