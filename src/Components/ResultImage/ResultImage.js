@@ -7,11 +7,11 @@ import styles from "./ResultImage.module.css";
 
 export const ResultImage = ({ winnerStyle, loserStyle }) => {
   return (
-    <div className={styles.divWinImg}>
+    <div className={styles.divImg}>
       <img
         className={styles.winImg}
         style={{ display: winnerStyle }}
-        width="400px"
+        width="480px"
         src={Winner}
         alt="Winner"
       />
