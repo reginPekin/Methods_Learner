@@ -12,6 +12,13 @@
   color: var(--red);
 }
 
+.taskName {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 100;
+  font-size: 0.9em;
+  color: var(--dark-blue);
+}
+
 .boardAndButtons {
   display: flex;
   flex-direction: row;
