@@ -27,6 +27,12 @@ export const TaskBoard = ({
         onChange={onChange}
         onFocus={onFocus}
       />
+      {winnerStyle === "flex" && (
+        <div className={styles.wellDone}>Well done!</div>
+      )}
+      {loserStyle === "flex" && (
+        <div className={styles.tryAgain}>Try again</div>
+      )}
     </div>
   );
 };
