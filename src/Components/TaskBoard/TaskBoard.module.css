@@ -1,3 +1,23 @@
 .task {
   margin: 2em 0em 0em 0em;
 }
+
+.wellDone {
+  color: var(--yellow);
+  font-family: "Fredoka One", cursive;
+  font-size: 3em;
+  margin: 0.3em 1em;
+}
+
+.tryAgain {
+  color: var(--dark-blue);
+  font-family: "Fredoka One", cursive;
+  font-size: 3em;
+  margin: 0.3em 1em;
+}
+
+.hint {
+  display: flex;
+  height: 10em;
+  justify-items: flex-end;
+}
