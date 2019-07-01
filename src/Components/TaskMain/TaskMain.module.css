@@ -15,22 +15,31 @@
 
 .hint {
   width: 60%;
-  height: 10%;
+  height: 4.5%;
   position: absolute;
   display: flex;
   left: 35%;
-  top: 85%;
+  top: 90%;
   justify-content: flex-end;
+  align-items: flex-end;
+  word-wrap: break-word;
 }
 
 .hintText {
-  align-items: center;
+  visibility: hidden;
+}
+
+.hint:hover .hintText {
+  visibility: visible;
+  display: flex;
+  padding: 0em 1em 0.3em;
+  word-wrap: inherit;
+  color: #f89e9ee0;
 }
 
 .taskName {
   font-family: "Work Sans", sans-serif;
   font-weight: 100;
-  font-size: 0.9em;
   color: var(--dark-blue);
 }
 
