@@ -37,6 +37,7 @@ export const TaskMainContainer = ({
       <section className={styles.hint}>
         <div className={styles.hintText}>{method.hint}</div>
         <img
+          className={styles.hintImage}
           width="30px"
           height="30px"
           src={Information}
@@ -75,6 +76,7 @@ export const TaskMainContainer = ({
               if (text.replace(/\s+/g, "") === task.answer) {
                 dispatch(changeWinnerDisplay("flex"));
                 dispatch(changeLoserDisplay("none"));
+
                 setText("");
               } else {
                 dispatch(changeWinnerDisplay("none"));
