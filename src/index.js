@@ -9,59 +9,90 @@ import { App } from "./Components/App";
 
 const methods = [
   {
-    name: "sort",
+    name: "from()",
     id: 0,
-    hint: "BlaBlaHint1",
+    hint:
+      "The method creates a new, shallow-copied **Array** instance from an array-like or iterable object",
     tasks: [
       {
-        taskName: "Task #1",
+        taskName: "Task №1",
         id: 0,
-        codeExample: "pad",
-        answer: "pad"
+        codeExample: "nope",
+        answer: "nope"
       },
       {
-        taskName: "Task #2",
+        taskName: "Task №2",
         id: 1,
-        codeExample: "ort",
-        answer: "ort"
+        codeExample: "nope2",
+        answer: "nope2"
       }
     ]
   },
   {
-    name: "method #2",
+    name: "isArray()",
     id: 1,
-    hint: "BlaBlaHint2",
+    hint: "The method determines whether the passed value is an **Array**",
     tasks: [
       {
-        taskName: "Task #1",
+        taskName: "Task №1",
         id: 0,
-        codeExample: "123",
-        answer: "123"
+        codeExample: "nope",
+        answer: "nope"
       },
       {
-        taskName: "Task #2",
+        taskName: "Task №2",
         id: 1,
-        codeExample: "456",
-        answer: "456"
+        codeExample: "nope",
+        answer: "nope"
       }
     ]
   },
   {
     id: 2,
-    name: "method #3",
-    hint: "BlaBlaHint3",
+    name: "of()",
+    hint:
+      "The method creates a new **Array** instance from a variable number of arguments, regardless of number or type of the arguments. The difference between **Array.of()** and the **Array** constructor is in the handling of integer arguments: Array.of(7) creates an array with a single element, 7, whereas Array(7) creates an empty array with a length property of 7",
     tasks: [
       {
-        taskName: "Task #1",
+        taskName: "Task №1",
         id: 0,
-        codeExample: "asd",
-        answer: "asd"
+        codeExample: "Array.of(13);",
+        answer: "[13]"
       },
       {
-        taskName: "Task #2",
+        taskName: "Task №2",
         id: 1,
-        codeExample: "dsa",
-        answer: "dsa"
+        codeExample: "Array.of(1, 3, 5, 'milk');",
+        answer: "[13,5]"
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: "Array.of(undefined);",
+        answer: "[undefined]"
+      }
+    ]
+  },
+  {
+    name: "concat()",
+    id: 3,
+    hint:
+      "The method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample:
+          "let array1 = ['a', 'b', 'c']" +
+          "\n" +
+          "let array2 = ['d', 'e', 'f'] console.log(array1.concat(array2));",
+        answer: "nope"
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: "nope",
+        answer: "nope"
       }
     ]
   }
