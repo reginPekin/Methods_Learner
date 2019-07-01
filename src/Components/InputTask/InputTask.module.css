@@ -2,7 +2,6 @@
   background-color: var(--red);
   padding: 0em 3em 1em 1.5em;
   border-radius: 0 0 7px 7px;
-  /* box-shadow: 0.1em 0.3em 0.3em 0em var(--yellow); */
 }
 
 .inputTask {
@@ -10,11 +9,75 @@
   flex-direction: column;
 }
 
+.relative {
+  position: relative;
+}
+
 .input {
-  margin-top: 1em;
-  width: 98.5%;
-  height: 2.5em;
-  border: none;
-  outline-color: var(--red);
   padding-left: 1em;
+  height: 2.5em;
+  width: 98%;
+  background-color: white;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.bottom,
+.top {
+  height: 1.3px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.left,
+.right {
+  width: 1.3px;
+  top: 0;
+  bottom: 0;
+  transform: scaleY(0);
+}
+
+.bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+input:focus ~ .bottom {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.right {
+  right: 0;
+  transform-origin: top right;
+}
+
+input:focus ~ .right {
+  transform-origin: bottom right;
+  transform: scaleY(1);
+}
+
+.top {
+  top: 0;
+  transform-origin: top left;
+}
+
+input:focus ~ .top {
+  transform-origin: top right;
+  transform: scaleX(1);
+}
+
+.left {
+  left: 0;
+  transform-origin: bottom left;
+}
+
+input:focus ~ .left {
+  transform-origin: top left;
+  transform: scaleY(1);
 }

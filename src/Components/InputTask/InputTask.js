@@ -16,17 +16,51 @@ export const InputTask = ({ onSubmit, value, onChange, onFocus }) => {
           ref.current.blur();
         }}
       >
-        <input
-          className={styles.input}
-          type="text"
-          placeholder="Write your answer"
-          ref={ref}
-          value={value}
-          onChange={event => {
-            onChange(event);
-          }}
-          onFocus={onFocus}
-        />
+        <div className={styles.relative}>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Write your answer"
+            ref={ref}
+            value={value}
+            onChange={event => {
+              onChange(event);
+            }}
+            onFocus={onFocus}
+          />
+          <span
+            style={{
+              position: "absolute",
+              backgroundColor: "var(--dark-blue)",
+              transition: "transform 0.5s ease"
+            }}
+            className={styles.bottom}
+          />
+          <span
+            style={{
+              position: "absolute",
+              backgroundColor: "var(--dark-blue)",
+              transition: "transform 0.5s ease"
+            }}
+            className={styles.right}
+          />
+          <span
+            style={{
+              position: "absolute",
+              backgroundColor: "var(--dark-blue)",
+              transition: "transform 0.5s ease"
+            }}
+            className={styles.top}
+          />
+          <span
+            style={{
+              position: "absolute",
+              backgroundColor: "var(--dark-blue)",
+              transition: "transform 0.5s ease"
+            }}
+            className={styles.left}
+          />
+        </div>
       </form>
     </div>
   );
