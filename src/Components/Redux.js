@@ -4,7 +4,8 @@ const initialState = {
   methodId: 0,
   taskId: 0,
   displayWinner: "none",
-  displayLoser: "none"
+  displayLoser: "none",
+  finger: null
 };
 
 export const changePage = (state = initialState, action) => {
@@ -17,6 +18,11 @@ export const changePage = (state = initialState, action) => {
       return { ...state, displayWinner: action.display };
     case "CHANGE_DISPLAY_LOSER":
       return { ...state, displayLoser: action.display };
+    case "CHANGE_FINGER":
+      return state.map(t => {
+        if (action.isRight === true) return { ...t, finger: true };
+        return { ...t, finger: false };
+      });
     default:
       return state;
   }
