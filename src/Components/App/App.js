@@ -5,11 +5,11 @@ import { MethodsList } from "../MethodsList/MethodsList";
 
 import styles from "./App.module.css";
 
-export const App = ({ methods }) => {
+export const App = () => {
   return (
     <div className={styles.app}>
-      <MethodsList className={styles.methodsList} methods={methods} />
-      <TaskMain methods={methods} />
+      <MethodsList className={styles.methodsList} />
+      <TaskMain />
     </div>
   );
 };
