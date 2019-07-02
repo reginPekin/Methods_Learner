@@ -26,6 +26,12 @@
   outline: none;
 }
 
+.spanStyle {
+  position: absolute;
+  background-color: var(--dark-blue);
+  transition: transform 0.5s ease;
+}
+
 .bottom,
 .top {
   height: 1.3px;
