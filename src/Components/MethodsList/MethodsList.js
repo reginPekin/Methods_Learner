@@ -22,14 +22,15 @@ export const MethodsListContainer = ({
 
   return (
     <section className={styles.methodsList}>
-      {/* <div className={styles.title}>Methods List</div> */}
-      <input
-        className={styles.searchInput}
-        type="text"
-        placeholder="Find method"
-        value={text}
-        onChange={event => setText(event.target.value)}
-      />
+      <div className={styles.inputText}>
+        <input
+          className={styles.searchInput}
+          type="text"
+          placeholder="Find method"
+          value={text}
+          onChange={event => setText(event.target.value)}
+        />
+      </div>
       <div className={styles.scroll}>
         {methods.map(
           (method, key) =>
@@ -57,7 +58,7 @@ export const MethodsListContainer = ({
 
                 {openedId === method.id &&
                   method.tasks.map((task, taskKey) => (
-                    <section className={styles.buttonAndFinger}>
+                    <section key={taskKey} className={styles.buttonAndFinger}>
                       <button
                         style={
                           task.id === taskId
@@ -65,7 +66,6 @@ export const MethodsListContainer = ({
                             : { backgroundColor: "var(--red)", color: "white" }
                         }
                         className={styles.taskSelection}
-                        key={taskKey}
                         onClick={() => {
                           dispatch(changeTask(task.id));
                           dispatch(changeWinnerDisplay("none"));
@@ -74,21 +74,11 @@ export const MethodsListContainer = ({
                       >
                         {task.taskName}
                       </button>
-                      {task.finger && (
-                        <img
-                          src={FingerUp}
-                          key={task.id + taskKey + 10}
-                          width="30px"
-                          alt="FingerUp"
-                        />
+                      {task.mark && (
+                        <img src={FingerUp} width="30px" alt="FingerUp" />
                       )}
-                      {task.finger === false && (
-                        <img
-                          src={FingerDown}
-                          key={task.id + taskKey + 10}
-                          width="30px"
-                          alt="FingerDown"
-                        />
+                      {task.mark === false && (
+                        <img src={FingerDown} width="30px" alt="FingerDown" />
                       )}
                     </section>
                   ))}
@@ -101,7 +91,8 @@ export const MethodsListContainer = ({
 };
 
 const mapStateToProps = state => ({
-  methodId: state.methodId,
-  taskId: state.taskId
+  methods: state.methods.array,
+  methodId: state.changePage.methodId,
+  taskId: state.changePage.taskId
 });
 export const MethodsList = connect(mapStateToProps)(MethodsListContainer);
