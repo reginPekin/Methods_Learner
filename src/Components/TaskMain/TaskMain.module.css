@@ -19,7 +19,7 @@
   position: absolute;
   display: flex;
   left: 35%;
-  top: 90%;
+  bottom: 4%;
   justify-content: flex-end;
   align-items: flex-end;
   word-wrap: break-word;
