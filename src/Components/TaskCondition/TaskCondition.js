@@ -9,7 +9,9 @@ export const TaskCondition = ({ task, winnerStyle, loserStyle }) => {
     <div className={styles.task}>
       <span className={styles.span}>Write result of the: </span>
       <div className={styles.taskCode}>
-        <div className={styles.textCode}>{task.codeExample}</div>
+        <div>
+          <pre className={styles.textCode}>{task.codeExample}</pre>
+        </div>
         <ResultImage
           className={styles.codeResult}
           winnerStyle={winnerStyle}
