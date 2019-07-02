@@ -56,12 +56,7 @@ export const TaskMainContainer = ({
                 dispatch({ type: "CHANGE_TASK", id: taskId - 1 });
               }}
             >
-              <img
-                src={Left}
-                alt="arrow-left"
-                onClick={() => console.log("CLICKED")}
-                style={{ width: "55px" }}
-              />
+              <img src={Left} alt="arrow-left" style={{ width: "55px" }} />
             </button>
           )}
         </section>
@@ -76,7 +71,9 @@ export const TaskMainContainer = ({
               if (text.replace(/\s+/g, "") === task.answer) {
                 dispatch(changeWinnerDisplay("flex"));
                 dispatch(changeLoserDisplay("none"));
-
+                dispatch({
+                  type: "CHANGE_MARK"
+                });
                 setText("");
               } else {
                 dispatch(changeWinnerDisplay("none"));
@@ -117,10 +114,11 @@ export const TaskMainContainer = ({
 };
 
 const mapStateToProps = state => ({
-  methodId: state.methodId,
-  taskId: state.taskId,
-  displayWinner: state.displayWinner,
-  displayLoser: state.displayLoser
+  methods: state.methods.array,
+  methodId: state.changePage.methodId,
+  taskId: state.changePage.taskId,
+  displayWinner: state.changePage.displayWinner,
+  displayLoser: state.changePage.displayLoser
 });
 
 export const TaskMain = connect(mapStateToProps)(TaskMainContainer);
