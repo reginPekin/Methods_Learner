@@ -9,10 +9,13 @@
   height: 100%;
   overflow: scroll;
 }
-/* 
-.scroll {
-} */
 
+.inputText {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--red);
+}
 .buttonAndFinger {
   display: flex;
   align-items: center;
