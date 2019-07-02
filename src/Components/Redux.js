@@ -1,4 +1,6 @@
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
+
+import { methodsObject } from "./methods";
 
 const initialState = {
   methodId: 0,
@@ -8,7 +10,30 @@ const initialState = {
   finger: null
 };
 
-export const changePage = (state = initialState, action) => {
+const initialStateMethods = {
+  array: methodsObject
+};
+
+const methods = (state = initialStateMethods, action) => {
+  switch (action.type) {
+    case "CHANGE_MARK":
+      console.log({
+        ...state,
+        array: state.methods.array.map(method =>
+          method.tasks.map(task => {
+            return { ...task, mark: true };
+          })
+        )
+      });
+
+      return { ...state };
+
+    default:
+      return { ...state };
+  }
+};
+
+const changePage = (state = initialState, action) => {
   switch (action.type) {
     case "CHANGE_METHOD":
       return { ...state, methodId: action.id };
@@ -18,17 +43,13 @@ export const changePage = (state = initialState, action) => {
       return { ...state, displayWinner: action.display };
     case "CHANGE_DISPLAY_LOSER":
       return { ...state, displayLoser: action.display };
-    case "CHANGE_FINGER":
-      return state.map(t => {
-        if (action.isRight === true) return { ...t, finger: true };
-        return { ...t, finger: false };
-      });
+
     default:
       return state;
   }
 };
 
 export const store = createStore(
-  changePage,
+  combineReducers({ changePage, methods }),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
