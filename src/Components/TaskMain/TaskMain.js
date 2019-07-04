@@ -26,8 +26,16 @@ export const TaskMainContainer = ({
 
   const method = methods[methodId];
 
-  const task = method.tasks[taskId];
+  if (!method || !method.tasks) {
+    return null;
+  }
 
+  const task = method.tasks[taskId];
+  console.log(taskId);
+
+  // console.log(
+  //   methods.map(method => method.tasks.map(task => console.log(task.mark)))
+  // );
   if (methodId === undefined || taskId === undefined) {
     return null;
   }
@@ -72,12 +80,21 @@ export const TaskMainContainer = ({
                 dispatch(changeWinnerDisplay("flex"));
                 dispatch(changeLoserDisplay("none"));
                 dispatch({
-                  type: "CHANGE_MARK"
+                  type: "CHANGE_MARK",
+                  methodIndex: method.id,
+                  taskIndex: task.id,
+                  mark: true
                 });
                 setText("");
               } else {
                 dispatch(changeWinnerDisplay("none"));
                 dispatch(changeLoserDisplay("flex"));
+                dispatch({
+                  type: "CHANGE_MARK",
+                  methodIndex: method.id,
+                  taskIndex: task.id,
+                  mark: false
+                });
                 setText("");
               }
               event.preventDefault();
