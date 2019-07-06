@@ -124,11 +124,8 @@ export const methodsObject = [
       {
         taskName: "Task №1",
         id: 0,
-        codeExample: `let array1 = ['a', 'b', 'c']; \r\n
+        codeExample: `let array1 = ['a', 'b', 'c']; \nlet iterator1 = array1.entries();\nconsole.log(iterator1.next().value);`,
 
-        let iterator1 = array1.entries();
-        
-        console.log(iterator1.next().value);`,
         answer: `[0,"a"]`,
         mark: null
       },
@@ -136,6 +133,13 @@ export const methodsObject = [
         taskName: "Task №2",
         id: 1,
         codeExample: `var array1 = ['a', 'b', 'c'];
+
+        var iterator1 = array1.entries();
+        
+        iterator1.next().done;
+        
+        console.log(iterator1.next().value);
+        var array1 = ['a', 'b', 'c'];
 
         var iterator1 = array1.entries();
         
