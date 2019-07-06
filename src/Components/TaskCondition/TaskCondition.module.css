@@ -12,26 +12,26 @@
 
 .taskCode {
   display: flex;
-  flex-direction: row;
   align-items: center;
   background-color: #f8f8f8;
   margin-top: 0.5em;
   padding-left: 1em;
   height: 100%;
+  /* width: 40%; */
   color: var(--dark-blue);
   font-family: "Montserrat", sans-serif;
+}
+
+p {
+  margin: 0%;
+  white-space: pre-wrap;
 }
 
 .textCode {
   display: flex;
   align-items: center;
   height: 100%;
-  flex: 5;
-}
-
-.codeResult {
-  display: flex;
-  flex: 3;
+  /* width: 10%; */
 }
 
 .span {
