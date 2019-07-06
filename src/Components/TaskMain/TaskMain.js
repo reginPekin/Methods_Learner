@@ -5,6 +5,8 @@ import { TaskBoard } from "../TaskBoard";
 
 import { changeWinnerDisplay } from "../../Utils/changeWinnerDidplay";
 import { changeLoserDisplay } from "../../Utils/changeLoserDisplay";
+import { changeMark } from "../../Utils/changeMark";
+import { changeTask } from "../../Utils/changeTask";
 
 import Information from "../../images/information.png";
 
@@ -59,9 +61,9 @@ export const TaskMainContainer = ({
         <section className={styles.nextPrev}>
           {taskId !== 0 && (
             <button
-              className={styles.bottonArrow}
+              className={styles.buttonArrow}
               onClick={() => {
-                dispatch({ type: "CHANGE_TASK", id: taskId - 1 });
+                dispatch(changeTask(taskId - 1));
               }}
             >
               <img src={Left} alt="arrow-left" style={{ width: "55px" }} />
@@ -79,22 +81,12 @@ export const TaskMainContainer = ({
               if (text.replace(/\s+/g, "") === task.answer) {
                 dispatch(changeWinnerDisplay("flex"));
                 dispatch(changeLoserDisplay("none"));
-                dispatch({
-                  type: "CHANGE_MARK",
-                  methodIndex: method.id,
-                  taskIndex: task.id,
-                  mark: true
-                });
+                dispatch(changeMark(method.id, task.id, true));
                 setText("");
               } else {
                 dispatch(changeWinnerDisplay("none"));
                 dispatch(changeLoserDisplay("flex"));
-                dispatch({
-                  type: "CHANGE_MARK",
-                  methodIndex: method.id,
-                  taskIndex: task.id,
-                  mark: false
-                });
+                dispatch(changeMark(method.id, task.id, false));
                 setText("");
               }
               event.preventDefault();
@@ -110,17 +102,12 @@ export const TaskMainContainer = ({
         <section className={styles.nextPrev}>
           {method.tasks[taskId + 1] !== undefined && (
             <button
-              className={styles.bottonArrow}
+              className={styles.buttonArrow}
               onClick={() => {
-                dispatch({ type: "CHANGE_TASK", id: taskId + 1 });
+                dispatch(changeTask(taskId + 1));
               }}
             >
-              <img
-                src={Right}
-                alt="arrow-right"
-                onClick={() => console.log("CLICKED")}
-                style={{ width: "55px" }}
-              />
+              <img src={Right} alt="arrow-right" style={{ width: "55px" }} />
             </button>
           )}
         </section>
