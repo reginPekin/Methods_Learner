@@ -14,7 +14,6 @@
 }
 
 .hint {
-  width: 60%;
   height: 4.5%;
   position: absolute;
   display: flex;
@@ -60,7 +59,7 @@
   flex: auto;
 }
 
-.bottonArrow {
+.buttonArrow {
   border: none;
   outline: none;
   padding: 0em;
