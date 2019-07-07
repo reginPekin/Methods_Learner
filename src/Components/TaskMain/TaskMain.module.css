@@ -6,7 +6,7 @@
 
 .name {
   margin: 1em 0em 0em 2em;
-  font-family: "PT-Serif";
+  font-family: "Inconsolata", monospace;
   font-size: 2em;
   font-weight: 600;
   color: var(--red);
@@ -14,11 +14,12 @@
 }
 
 .hint {
+  width: 60%;
   height: 4.5%;
   position: absolute;
   display: flex;
   left: 35%;
-  bottom: 4%;
+  top: 90%;
   justify-content: flex-end;
   align-items: flex-end;
   word-wrap: break-word;
