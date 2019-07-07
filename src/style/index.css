@@ -7,8 +7,9 @@ element {
   --dark-blue: #1e3747;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito|Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
 
 @font-face {
   font-family: "AdventPro";
