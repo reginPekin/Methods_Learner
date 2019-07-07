@@ -4,14 +4,14 @@
 
 .wellDone {
   color: var(--yellow);
-  font-family: "Fredoka One", cursive;
+  font-family: "Inconsolata", monospace;
   font-size: 3em;
   margin: 0.3em 1em;
 }
 
 .tryAgain {
   color: var(--dark-blue);
-  font-family: "Fredoka One", cursive;
+  font-family: "Inconsolata", monospace;
   font-size: 3em;
   margin: 0.3em 1em;
 }
