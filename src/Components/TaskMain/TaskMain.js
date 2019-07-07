@@ -64,6 +64,8 @@ export const TaskMainContainer = ({
               className={styles.buttonArrow}
               onClick={() => {
                 dispatch(changeTask(taskId - 1));
+                dispatch(changeWinnerDisplay("none"));
+                dispatch(changeLoserDisplay("none"));
               }}
             >
               <img src={Left} alt="arrow-left" style={{ width: "55px" }} />
@@ -105,6 +107,8 @@ export const TaskMainContainer = ({
               className={styles.buttonArrow}
               onClick={() => {
                 dispatch(changeTask(taskId + 1));
+                dispatch(changeWinnerDisplay("none"));
+                dispatch(changeLoserDisplay("none"));
               }}
             >
               <img src={Right} alt="arrow-right" style={{ width: "55px" }} />
