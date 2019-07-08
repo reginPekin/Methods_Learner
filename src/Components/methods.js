@@ -81,15 +81,40 @@ export const methodsObject = [
       {
         taskName: "Task №1",
         id: 0,
-        codeExample: `dsfsdfsdfsddsfsdf`,
-        answer: "nope",
+        codeExample: `const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+console.log(array1.concat(array2));`,
+        answer: `["a","b","c","d","e","f"]`,
         mark: null
       },
       {
         taskName: "Task №2",
         id: 1,
-        codeExample: "nope",
-        answer: "nope",
+        codeExample: `const num1 = [1, 2, 3];
+const num2 = [4, 5, 6];
+const num3 = [7, 8, 9];
+const numbers = num1.concat(num2, num3);
+console.log(numbers);`,
+        answer: "[1,2,3,4,5,6,7,8,9]",
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const letters = ['a', 'b', 'c'];
+const alphaNumeric = letters.concat(1, [2, 3]);
+console.log(alphaNumeric); `,
+        answer: "['a','b','c',1,2,3]",
+        mark: null
+      },
+      {
+        taskName: "Task №4",
+        id: 3,
+        codeExample: `const num1 = [[1]];
+const num2 = [2, [3]];
+const numbers = num1.concat(num2);
+console.log(numbers); `,
+        answer: "[[1],2,[3]]",
         mark: null
       }
     ]
