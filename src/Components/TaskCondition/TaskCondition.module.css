@@ -3,7 +3,7 @@
   flex-direction: column;
   background-color: var(--red);
   padding: 1em 2em 0.5em 1em;
-  height: 10em;
+  min-height: 10em;
   color: white;
   font-size: 1.5em;
   border-radius: 7px 7px 0px 0px;
@@ -15,11 +15,11 @@
   align-items: center;
   background-color: #f8f8f8;
   margin-top: 0.5em;
-  padding-left: 1em;
-  height: 100%;
-  /* width: 40%; */
+  padding: 1em;
+  min-height: 10em;
   color: var(--dark-blue);
   font-family: "Nunito", sans-serif;
+  font-size: 0.8em;
 }
 
 p {
