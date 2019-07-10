@@ -303,5 +303,35 @@ console.log([35, 10, 8, 12, 5, 17, 35].find(isPrime));`,
         mark: null
       }
     ]
+  },
+  {
+    name: "findIndex()",
+    id: 10,
+    arrayMethodType: "Array.prototype.",
+    hint: `The findIndex() method returns the index of the first element 
+    in the array that satisfies the provided testing function. 
+    Otherwise, it returns -1, indicating that no element passed the test.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = [-2, 12, 8.5, 130/90, 46%32];
+const isLargeNumber = element => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));`,
+        answer: `4`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+const index = fruits.findIndex(fruit => fruit === "blueberries");
+        
+console.log(index);`,
+        answer: `3`,
+        mark: null
+      }
+    ]
   }
 ];
