@@ -33,7 +33,6 @@ export const TaskMainContainer = ({
   }
 
   const task = method.tasks[taskId];
-  console.log(taskId);
 
   // console.log(
   //   methods.map(method => method.tasks.map(task => console.log(task.mark)))
@@ -55,6 +54,7 @@ export const TaskMainContainer = ({
         />
       </section>
       <div className={styles.name}>
+        {method.arrayMethodType}
         {method.name}: <span className={styles.taskName}>{task.taskName}</span>
       </div>
       <div className={styles.boardAndButtons}>
