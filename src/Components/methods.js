@@ -270,5 +270,38 @@ console.log(filterItems(fruits, 'ap'));`,
         mark: null
       }
     ]
+  },
+  {
+    name: "find()",
+    id: 9,
+    arrayMethodType: "Array.prototype.",
+    hint: `The find() method returns the value of the first element in the array that satisfies the provided testing function. Otherwise **undefined** is returned.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = [3, 45, -8, 30, 24];
+let found = array1.find(element => element > 10);
+console.log(found);`,
+        answer: `45`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const isPrime = (element, index, array) => {
+    let start = 2;
+    while (start <= Math.sqrt(element)) {
+        if (element % start++ < 1) {
+            return false;
+        }
+    }
+    return element > 1;
+}
+console.log([35, 10, 8, 12, 5, 17, 35].find(isPrime));`,
+        answer: `5`,
+        mark: null
+      }
+    ]
   }
 ];
