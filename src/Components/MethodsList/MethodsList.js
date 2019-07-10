@@ -18,6 +18,7 @@ export const MethodsListContainer = ({
   taskId
 }) => {
   const [openedId, setIsOpened] = useState(0);
+  const [isClosed, setIsClosed] = useState(true);
   const [text, setText] = useState("");
 
   return (
@@ -35,7 +36,7 @@ export const MethodsListContainer = ({
         {methods.map(
           (method, key) =>
             (text === "" ||
-              text.toLowerCase() === method.name.slice(0, text.length)) && (
+              method.name.toLowerCase().indexOf(text.toLowerCase()) !== -1) && (
               <div className={styles.flexForTasks} key={key}>
                 <button
                   style={
@@ -47,6 +48,10 @@ export const MethodsListContainer = ({
                   method={method}
                   onClick={() => {
                     setIsOpened(method.id);
+                    method.id === openedId
+                      ? setIsClosed(!isClosed)
+                      : setIsClosed(isClosed);
+                    console.log(openedId);
                     dispatch(changeWinnerDisplay("none"));
                     dispatch(changeLoserDisplay("none"));
                     dispatch(changeMethod(method.id));
@@ -57,6 +62,7 @@ export const MethodsListContainer = ({
                 </button>
 
                 {openedId === method.id &&
+                  isClosed &&
                   method.tasks.map((task, taskKey) => (
                     <section key={taskKey} className={styles.buttonAndFinger}>
                       <button
