@@ -50,7 +50,7 @@ export const MethodsListContainer = ({
                     setIsOpened(method.id);
                     method.id === openedId
                       ? setIsClosed(!isClosed)
-                      : setIsClosed(isClosed);
+                      : setIsClosed(true);
                     console.log(openedId);
                     dispatch(changeWinnerDisplay("none"));
                     dispatch(changeLoserDisplay("none"));
