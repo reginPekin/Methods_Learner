@@ -39,6 +39,12 @@
   outline: none;
 }
 
+.methodSelection:hover {
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.56);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.56);
+  box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.56);
+}
+
 .taskSelection {
   background-color: white;
   padding: 0.2em;
@@ -50,6 +56,10 @@
   border-color: white;
   font-size: 0.8em;
   outline: none;
+}
+
+.taskSelection:hover {
+  border-width: 1.5px;
 }
 
 .searchInput {
