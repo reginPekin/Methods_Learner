@@ -37,6 +37,43 @@
   color: #f89e9ee0;
 }
 
+.answerBox {
+  width: 60%;
+  height: 6%;
+  position: absolute;
+  display: flex;
+  left: 35%;
+  top: 75%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  word-wrap: break-word;
+  align-items: center;
+}
+
+.buttonAnswer {
+  background-color: white;
+  padding: 0.4em;
+  width: 10%;
+  color: var(--red);
+  border-radius: 5px;
+  border-color: var(--red);
+  font-size: 0.8em;
+  outline: none;
+  border-width: 2px;
+}
+
+.buttonAnswer:hover {
+  border-color: var(--dark-blue);
+  color: var(--dark-blue);
+}
+
+.answerText {
+  display: flex;
+  padding: 0em 1em 0.3em;
+  word-wrap: inherit;
+  color: var(--dark-blue);
+}
+
 .taskName {
   font-family: "Work Sans", sans-serif;
   font-weight: 100;
