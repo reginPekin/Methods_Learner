@@ -333,5 +333,60 @@ console.log(index);`,
         mark: null
       }
     ]
+  },
+  {
+    name: "flat()",
+    id: 11,
+    arrayMethodType: "Array.prototype.",
+    hint: `The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const arr1 = [1, 2, [3, 4]];
+console.log(arr1.flat());`,
+        answer: `[1, 2, 3, 4]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+const index = fruits.findIndex(fruit => fruit === "blueberries");
+        
+console.log(index);`,
+        answer: `3`,
+        mark: null
+      }
+    ]
+  },
+  {
+    name: "flatMap()",
+    id: 12,
+    arrayMethodType: "Array.prototype.",
+    hint: `The flatMap() method first maps each element using a mapping function, 
+    then flattens the result into a new array. 
+    It is identical to a **map()** followed by a **flat()** of depth 1, 
+    but flatMap() is often quite useful, as merging both into one method is slightly more efficient.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `let arr1 = [1, 2, 3, 4];
+
+console.log(arr1.flatMap(x => [x * 2]));`,
+        answer: `[2,4,6,8]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `let arr1 = [1, 2, 3, 4];
+
+console.log(arr1.flatMap(x => [[x * 2]]));`,
+        answer: `[[2],[4],[6],[8]]`,
+        mark: null
+      }
+    ]
   }
 ];
