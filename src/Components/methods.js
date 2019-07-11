@@ -170,7 +170,10 @@ console.log(numbers); `,
       {
         taskName: "Task №1",
         id: 0,
-        codeExample: `let array1 = ['a', 'b', 'c']; \nlet iterator1 = array1.entries();\nconsole.log(iterator1.next().value);`,
+        codeExample: `let array1 = ['a', 'b', 'c']; 
+let iterator1 = array1.entries();
+
+console.log(iterator1.next().value);`,
 
         answer: `[0,"a"]`,
         mark: null
@@ -344,7 +347,7 @@ console.log(index);`,
         taskName: "Task №1",
         id: 0,
         codeExample: `const arr1 = [1, 2, [3, 4]];
-        
+
 console.log(arr1.flat());`,
         answer: `[1, 2, 3, 4]`,
         mark: null
@@ -395,6 +398,42 @@ console.log(arr1.flatMap(x => [x * 2]));`,
 
 console.log(arr1.flatMap(x => [[x * 2]]));`,
         answer: `[[2],[4],[6],[8]]`,
+        mark: null
+      }
+    ]
+  },
+  {
+    name: "forEach()",
+    id: 13,
+    arrayMethodType: "Array.prototype.",
+    hint: `The forEach() method executes a provided function once for each array element.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = ['a', 'b', 'c'];
+const array2 = []
+        
+array1.forEach(element => {
+    array2.push(element+1);
+});
+
+console.log(array2)`,
+        answer: `["a1","b1","c1"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const array1 = [2*2, 7, 32/2];
+const array2 = []
+        
+array1.forEach(element => {
+    if(Number.isInteger(Math.sqrt(element))) array2.push(element+2);
+});
+
+console.log(array2);`,
+        answer: `[6,18]`,
         mark: null
       }
     ]
