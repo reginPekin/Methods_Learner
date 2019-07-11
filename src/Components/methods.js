@@ -344,6 +344,7 @@ console.log(index);`,
         taskName: "Task №1",
         id: 0,
         codeExample: `const arr1 = [1, 2, [3, 4]];
+        
 console.log(arr1.flat());`,
         answer: `[1, 2, 3, 4]`,
         mark: null
@@ -356,6 +357,15 @@ const index = fruits.findIndex(fruit => fruit === "blueberries");
         
 console.log(index);`,
         answer: `3`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const arr4 = [1, 2, , 4, 5];
+
+console.log(arr4.flat());`,
+        answer: `[1,2,4,5]`,
         mark: null
       }
     ]
