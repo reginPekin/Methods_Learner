@@ -535,5 +535,42 @@ console.log(plants.indexOf('moss'));`,
         mark: null
       }
     ]
+  },
+  {
+    name: "join()",
+    id: 16,
+    arrayMethodType: "Array.prototype.",
+    hint: `The join() method creates and returns a new string by concatenating all of the elements in an array, 
+    separated by commas or a specified separator string. 
+    If the array has only one item, then that item will be returned without using the separator.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const elements = ['Mother', 'Father', 'Sister', 'Brother'];
+
+console.log(elements.join());`,
+        answer: `"Mother,Father,Sister,Brother"`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const elements = ['Mother', 'Father', 'Sister', 'Brother'];
+
+console.log(elements.join(''));`,
+        answer: `"MotherFatherSisterBrother"`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const elements = ['Mother', 'Father', 'Sister', 'Brother'];
+
+console.log(elements.join('-'));`,
+        answer: `"Mother-Father-Sister-Brother"`,
+        mark: null
+      }
+    ]
   }
 ];
