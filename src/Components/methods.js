@@ -437,5 +437,68 @@ console.log(array2);`,
         mark: null
       }
     ]
+  },
+  {
+    name: "includes()",
+    id: 14,
+    arrayMethodType: "Array.prototype.",
+    hint: `The includes() method determines whether an array includes a certain value among its entries, 
+    returning true or false as appropriate.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const pets = ['sweet', 'hot', 'dog'];
+        
+console.log(pets.includes('hot'));`,
+        answer: `true`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const pets = ['sweet', 'hot', 'dog'];
+        
+console.log(pets.includes('og'));`,
+        answer: `false`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const pets = ['sweet', 'hot', 'dog'];
+        
+console.log(pets.includes('sweet', 'dog'));`,
+        answer: `true`,
+        mark: null
+      },
+      {
+        taskName: "Task №4",
+        id: 3,
+        codeExample: `const pets = ['sweet', 'hot', 'dog'];
+        
+console.log(pets.includes('dog', -1));`,
+        answer: `true`,
+        mark: null
+      },
+      {
+        taskName: "Task №5",
+        id: 4,
+        codeExample: `const pets = ['sweet', 'hot', 'dog'];
+        
+console.log(pets.includes('dog', -3));`,
+        answer: `false`,
+        mark: null
+      },
+      {
+        taskName: "Task №6",
+        id: 5,
+        codeExample: `const pets = ['sweet', 'hot', 'dog'];
+        
+console.log(pets.includes('dog', -4));`,
+        answer: `true`,
+        mark: null
+      }
+    ]
   }
 ];
