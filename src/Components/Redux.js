@@ -6,7 +6,8 @@ const initialState = {
   methodId: 0,
   taskId: 0,
   displayWinner: "none",
-  displayLoser: "none"
+  displayLoser: "none",
+  displayAnswer: false
 };
 
 const initialStateMethods = {
@@ -50,6 +51,11 @@ const changePage = (state = initialState, action) => {
       return { ...state, displayWinner: action.display };
     case "CHANGE_DISPLAY_LOSER":
       return { ...state, displayLoser: action.display };
+    case "CHANGE_DISPLAY_ANSWER":
+      return {
+        ...state,
+        displayAnswer: action.display
+      };
 
     default:
       return state;
