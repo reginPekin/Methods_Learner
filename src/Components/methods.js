@@ -572,5 +572,25 @@ console.log(elements.join('-'));`,
         mark: null
       }
     ]
+  },
+  {
+    name: "keys()",
+    id: 17,
+    arrayMethodType: "Array.prototype.",
+    hint: `The keys() method returns a new **Array Iterator** object that contains the keys for each index in the array.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = ['a', 'b', 'c'];
+let iterator = array1.keys(); 
+          
+for (let key of iterator) {
+    console.log(key);
+}`,
+        answer: `0 1 2`,
+        mark: null
+      }
+    ]
   }
 ];
