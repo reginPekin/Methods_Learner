@@ -10,6 +10,7 @@ import { changeWinnerDisplay } from "../../Utils/changeWinnerDidplay";
 import { changeLoserDisplay } from "../../Utils/changeLoserDisplay";
 import { changeMethod } from "../../Utils/changeMethod";
 import { changeTask } from "../../Utils/changeTask";
+import { changeAnswerDisplay } from "../../Utils/changeAnswerDisplay";
 
 export const MethodsListContainer = ({
   methods,
@@ -55,6 +56,7 @@ export const MethodsListContainer = ({
                     dispatch(changeWinnerDisplay("none"));
                     dispatch(changeLoserDisplay("none"));
                     dispatch(changeMethod(method.id));
+                    dispatch(changeAnswerDisplay(false));
                     dispatch(changeTask(0));
                   }}
                 >
@@ -76,6 +78,7 @@ export const MethodsListContainer = ({
                           dispatch(changeTask(task.id));
                           dispatch(changeWinnerDisplay("none"));
                           dispatch(changeLoserDisplay("none"));
+                          dispatch(changeAnswerDisplay(false));
                         }}
                       >
                         {task.taskName}
