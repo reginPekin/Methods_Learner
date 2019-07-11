@@ -640,7 +640,7 @@ console.log(animals.lastIndexOf('Dodo', -1));`,
       {
         taskName: "Task №1",
         id: 0,
-        codeExample: `consr array = [1, 4, 9, 16];
+        codeExample: `const array = [1, 4, 9, 16];
 
 console.log(array.map(x => x * 3));`,
         answer: `[3, 12, 27, 48]`,
@@ -654,6 +654,34 @@ const roots = numbers.map(num => Math.sqrt(num));
         
 console.log(roots)`,
         answer: `[1, 2, 3]`,
+        mark: null
+      }
+    ]
+  },
+  {
+    name: "pop()",
+    id: 20,
+    arrayMethodType: "Array.prototype.",
+    hint: `The pop() method removes the last element from an array and returns that element. 
+    This method changes the length of the array.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const names = ['Alice', 'Bob', 'Daphne', 'John', 'Lisa'];
+
+console.log(names.pop());`,
+        answer: `"Lisa"`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const names = ['Alice', 'Bob', 'Daphne', 'John', 'Lisa'];;
+
+names.pop()
+console.log(names);`,
+        answer: `["Alice", "Bob", "Daphne", "John"]`,
         mark: null
       }
     ]
