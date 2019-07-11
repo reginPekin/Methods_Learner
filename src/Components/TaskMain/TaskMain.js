@@ -7,6 +7,7 @@ import { changeWinnerDisplay } from "../../Utils/changeWinnerDidplay";
 import { changeLoserDisplay } from "../../Utils/changeLoserDisplay";
 import { changeMark } from "../../Utils/changeMark";
 import { changeTask } from "../../Utils/changeTask";
+import { changeAnswerDisplay } from "../../Utils/changeAnswerDisplay";
 
 import Information from "../../images/information.png";
 
@@ -22,7 +23,8 @@ export const TaskMainContainer = ({
   taskId,
   dispatch,
   displayWinner,
-  displayLoser
+  displayLoser,
+  displayAnswer
 }) => {
   const [text, setText] = useState("");
 
@@ -34,14 +36,10 @@ export const TaskMainContainer = ({
 
   const task = method.tasks[taskId];
 
-  // console.log(
-  //   methods.map(method => method.tasks.map(task => console.log(task.mark)))
-  // );
   if (methodId === undefined || taskId === undefined) {
     return null;
   }
   return (
-    // <div>
     <main className={styles.taskBoard}>
       <section className={styles.hint}>
         <div className={styles.hintText}>{method.hint}</div>
@@ -52,6 +50,22 @@ export const TaskMainContainer = ({
           src={Information}
           alt="InformativeBlock"
         />
+      </section>
+      <section className={styles.answerBox}>
+        <div
+          className={styles.answerText}
+          style={
+            displayAnswer ? { visibility: "visible" } : { visibility: "hidden" }
+          }
+        >
+          {task.answer}
+        </div>
+        <button
+          onClick={() => dispatch(changeAnswerDisplay(!displayAnswer))}
+          className={styles.buttonAnswer}
+        >
+          {!displayAnswer ? "Show" : "Hide"} answer
+        </button>
       </section>
       <div className={styles.name}>
         {method.arrayMethodType}
@@ -80,7 +94,9 @@ export const TaskMainContainer = ({
             value={text}
             onChange={event => setText(event.target.value)}
             onSubmit={event => {
-              if (text.replace(/\s+/g, "") === task.answer) {
+              if (
+                text.replace(/\s+/g, "") === task.answer.replace(/\s+/g, "")
+              ) {
                 dispatch(changeWinnerDisplay("flex"));
                 dispatch(changeLoserDisplay("none"));
                 dispatch(changeMark(method.id, task.id, true));
@@ -124,6 +140,7 @@ const mapStateToProps = state => ({
   methods: state.methods.array,
   methodId: state.changePage.methodId,
   taskId: state.changePage.taskId,
+  displayAnswer: state.changePage.displayAnswer,
   displayWinner: state.changePage.displayWinner,
   displayLoser: state.changePage.displayLoser
 });
