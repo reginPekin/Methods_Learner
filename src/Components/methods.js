@@ -10,7 +10,7 @@ export const methodsObject = [
         taskName: "Task №1",
         id: 0,
         codeExample: "console.log(Array.from([1, 2, 3], x => x * x));",
-        answer: "[1,4,9]",
+        answer: "[1, 4, 9]",
         mark: null
       },
       {
@@ -18,7 +18,7 @@ export const methodsObject = [
         id: 1,
         codeExample: `const set = new Set(['foo', 'bar', 'baz', 'foo']);
 Array.from(set);`,
-        answer: `["foo","bar","baz"]`,
+        answer: `["foo", "bar", "baz"]`,
         mark: null
       }
     ]
@@ -77,7 +77,7 @@ Array.from(set);`,
         taskName: "Task №2",
         id: 1,
         codeExample: "Array.of(1, 3, 5, 'milk');",
-        answer: "[13,5]",
+        answer: "[13, 5]",
         mark: null
       },
       {
@@ -103,7 +103,7 @@ Array.from(set);`,
         codeExample: `const array1 = ["a", "b", "c"];
 const array2 = ["d", "e", "f"];
 console.log(array1.concat(array2));`,
-        answer: `["a","b","c","d","e","f"]`,
+        answer: `["a", "b", "c", "d", "e", "f"]`,
         mark: null
       },
       {
@@ -114,7 +114,7 @@ const num2 = [4, 5, 6];
 const num3 = [7, 8, 9];
 const numbers = num1.concat(num2, num3);
 console.log(numbers);`,
-        answer: "[1,2,3,4,5,6,7,8,9]",
+        answer: "[1, 2, 3, 4, 5, 6, 7, 8, 9]",
         mark: null
       },
       {
@@ -123,7 +123,7 @@ console.log(numbers);`,
         codeExample: `const letters = ['a', 'b', 'c'];
 const alphaNumeric = letters.concat(1, [2, 3]);
 console.log(alphaNumeric); `,
-        answer: "['a','b','c',1,2,3]",
+        answer: "['a', 'b', 'c', 1, 2, 3]",
         mark: null
       },
       {
@@ -133,7 +133,7 @@ console.log(alphaNumeric); `,
 const num2 = [2, [3]];
 const numbers = num1.concat(num2);
 console.log(numbers); `,
-        answer: "[[1],2,[3]]",
+        answer: "[[1], 2, [3]]",
         mark: null
       }
     ]
@@ -175,7 +175,7 @@ let iterator1 = array1.entries();
 
 console.log(iterator1.next().value);`,
 
-        answer: `[0,"a"]`,
+        answer: `[0, "a"]`,
         mark: null
       },
       {
@@ -185,7 +185,7 @@ console.log(iterator1.next().value);`,
 let iterator1 = array1.entries();
 iterator1.next().done;
 console.log(iterator1.next().value);`,
-        answer: `[1,"b"]`,
+        answer: `[1, "b"]`,
         mark: null
       }
     ]
@@ -225,7 +225,7 @@ console.log(iterator1.next().value);`,
         id: 0,
         codeExample: `var array1 = [1, 2, 3, 4];
 console.log(array1.fill(5, 1));`,
-        answer: `[1,5,5,5]`,
+        answer: `[1, 5, 5, 5]`,
         mark: null
       },
       {
@@ -233,7 +233,7 @@ console.log(array1.fill(5, 1));`,
         id: 1,
         codeExample: `var array1 = [2, 9, 0, 4, 6];
 console.log(array1.fill(6));`,
-        answer: `[6,6,6,6,6]`,
+        answer: `[6, 6, 6, 6, 6]`,
         mark: null
       },
       {
@@ -241,7 +241,7 @@ console.log(array1.fill(6));`,
         id: 2,
         codeExample: `var array1 = [0, 8, -2, 1.1, 7];
 console.log(array1.fill(0, 6, 9));`,
-        answer: `[0,8,-2,1.1,7]`,
+        answer: `[0, 8, -2, 1.1, 7]`,
         mark: null
       }
     ]
@@ -258,7 +258,7 @@ console.log(array1.fill(0, 6, 9));`,
         codeExample: `const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 const result = words.filter(word => word.length > 5);
 console.log(result);`,
-        answer: `["exuberant","destruction","present"]`,
+        answer: `["exuberant", "destruction", "present"]`,
         mark: null
       },
       {
@@ -269,7 +269,7 @@ const filterItems = (arr, query) => {
     return arr.filter(el => el.indexOf(query) !== -1);
 };
 console.log(filterItems(fruits, 'ap'));`,
-        answer: `["apple","grapes"]`,
+        answer: `["apple", "grapes"]`,
         mark: null
       }
     ]
@@ -368,7 +368,7 @@ console.log(index);`,
         codeExample: `const arr4 = [1, 2, , 4, 5];
 
 console.log(arr4.flat());`,
-        answer: `[1,2,4,5]`,
+        answer: `[1, 2, 4, 5]`,
         mark: null
       }
     ]
@@ -388,7 +388,7 @@ console.log(arr4.flat());`,
         codeExample: `let arr1 = [1, 2, 3, 4];
 
 console.log(arr1.flatMap(x => [x * 2]));`,
-        answer: `[2,4,6,8]`,
+        answer: `[2, 4, 6, 8]`,
         mark: null
       },
       {
@@ -397,7 +397,7 @@ console.log(arr1.flatMap(x => [x * 2]));`,
         codeExample: `let arr1 = [1, 2, 3, 4];
 
 console.log(arr1.flatMap(x => [[x * 2]]));`,
-        answer: `[[2],[4],[6],[8]]`,
+        answer: `[[2], [4], [6], [8]]`,
         mark: null
       }
     ]
@@ -419,7 +419,7 @@ array1.forEach(element => {
 });
 
 console.log(array2)`,
-        answer: `["a1","b1","c1"]`,
+        answer: `["a1", "b1", "c1"]`,
         mark: null
       },
       {
@@ -433,7 +433,7 @@ array1.forEach(element => {
 });
 
 console.log(array2);`,
-        answer: `[6,18]`,
+        answer: `[6, 18]`,
         mark: null
       }
     ]
