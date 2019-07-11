@@ -433,7 +433,7 @@ array1.forEach(element => {
 });
 
 console.log(array2);`,
-        answer: `[6, 18]`,
+        answer: `[6,18]`,
         mark: null
       }
     ]
@@ -497,6 +497,41 @@ console.log(pets.includes('dog', -3));`,
         
 console.log(pets.includes('dog', -4));`,
         answer: `true`,
+        mark: null
+      }
+    ]
+  },
+  {
+    name: "indexOf()",
+    id: 15,
+    arrayMethodType: "Array.prototype.",
+    hint: `The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const plants = ['delphinium', 'bamboo', 'cherry blossom', 'bamboo', 'mushroom'];
+
+console.log(plants.indexOf('bamboo'));`,
+        answer: `1`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const plants = ['delphinium', 'bamboo', 'cherry blossom', 'bamboo', 'mushroom'];
+
+console.log(plants.indexOf('bamboo',2));`,
+        answer: `3`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const plants = ['delphinium', 'bamboo', 'cherry blossom', 'bamboo', 'mushroom'];
+
+console.log(plants.indexOf('moss'));`,
+        answer: `-1`,
         mark: null
       }
     ]
