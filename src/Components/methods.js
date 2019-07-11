@@ -685,5 +685,32 @@ console.log(names);`,
         mark: null
       }
     ]
+  },
+  {
+    name: "push()",
+    id: 21,
+    arrayMethodType: "Array.prototype.",
+    hint: `The push() method adds one or more elements to the end of an array and returns the new length of the array.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const sports = ['tennis', 'netball', 'pankration'];
+
+console.log(sports.push('cuju'));`,
+        answer: `4`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const sports = ['tennis', 'netball', 'pankration'];
+
+sports.push('cuju');
+console.log(sports);`,
+        answer: `["tennis", "netball", "pankration", "cuju"]`,
+        mark: null
+      }
+    ]
   }
 ];
