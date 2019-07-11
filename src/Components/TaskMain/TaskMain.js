@@ -84,7 +84,6 @@ export const TaskMainContainer = ({
                 dispatch(changeWinnerDisplay("flex"));
                 dispatch(changeLoserDisplay("none"));
                 dispatch(changeMark(method.id, task.id, true));
-                setText("");
               } else {
                 dispatch(changeWinnerDisplay("none"));
                 dispatch(changeLoserDisplay("flex"));
