@@ -80,6 +80,7 @@ export const TaskMainContainer = ({
                 dispatch(changeTask(taskId - 1));
                 dispatch(changeWinnerDisplay("none"));
                 dispatch(changeLoserDisplay("none"));
+                dispatch(changeAnswerDisplay(false));
               }}
             >
               <img src={Left} alt="arrow-left" style={{ width: "55px" }} />
@@ -124,6 +125,7 @@ export const TaskMainContainer = ({
                 dispatch(changeTask(taskId + 1));
                 dispatch(changeWinnerDisplay("none"));
                 dispatch(changeLoserDisplay("none"));
+                dispatch(changeAnswerDisplay(false));
               }}
             >
               <img src={Right} alt="arrow-right" style={{ width: "55px" }} />
