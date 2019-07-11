@@ -629,5 +629,33 @@ console.log(animals.lastIndexOf('Dodo', -1));`,
         mark: null
       }
     ]
+  },
+  {
+    name: "map()",
+    id: 19,
+    arrayMethodType: "Array.prototype.",
+    hint: `The map() method creates a new array with the results of calling 
+  a provided function on every element in the calling array.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `consr array = [1, 4, 9, 16];
+
+console.log(array.map(x => x * 3));`,
+        answer: `[3, 12, 27, 48]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const numbers = [1, 4, 9];
+const roots = numbers.map(num => Math.sqrt(num));
+        
+console.log(roots)`,
+        answer: `[1, 2, 3]`,
+        mark: null
+      }
+    ]
   }
 ];
