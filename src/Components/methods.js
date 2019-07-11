@@ -592,5 +592,42 @@ for (let key of iterator) {
         mark: null
       }
     ]
+  },
+  {
+    name: "lastIndexOf()",
+    id: 18,
+    arrayMethodType: "Array.prototype.",
+    hint: `The lastIndexOf() method returns the last index at which a given element can be found in the array, 
+    or -1 if it is not present. 
+    The array is searched backwards, starting at **fromIndex**.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+
+console.log(animals.lastIndexOf('Dodo'));`,
+        answer: `3`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+
+console.log(animals.lastIndexOf('Dodo', -2));`,
+        answer: `0`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+
+console.log(animals.lastIndexOf('Dodo', -1));`,
+        answer: `3`,
+        mark: null
+      }
+    ]
   }
 ];
