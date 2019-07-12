@@ -818,5 +818,44 @@ console.log(number.reverse())`,
         mark: null
       }
     ]
+  },
+  {
+    name: "shift()",
+    id: 25,
+    arrayMethodType: "Array.prototype.",
+    hint: `The shift() method removes the *first* element from an array and returns that removed element. 
+    This method changes the length of the array.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const color = ['red', 'green', 'blue'];
+let firstColor = color.shift(); 
+
+console.log(color);`,
+        answer: `["green", "blue"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const color = ['red', 'green', 'blue'];
+let firstColor = color.shift(); 
+
+console.log(firstColor);`,
+        answer: `"red"`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 3,
+        codeExample: `const names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
+while( (i = names.shift()) !== undefined ) {
+    console.log(i);
+}`,
+        answer: `"Andrew" "Edward" "Paul" "Chris" "John"`,
+        mark: null
+      }
+    ]
   }
 ];
