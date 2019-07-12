@@ -712,5 +712,51 @@ console.log(sports);`,
         mark: null
       }
     ]
+  },
+  {
+    name: "reduce()",
+    id: 22,
+    arrayMethodType: "Array.prototype.",
+    hint: `The reduce() method executes a *reducer* function (that you provide) on each element of the array, 
+    resulting in a single output value.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator * currentValue;
+
+console.log(array1.reduce(reducer));
+console.log(array1.reduce(reducer, 5));`,
+        answer: `24 120`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const flattened = [[0, 1], [2, 3], [4, 5]].reduce((accumulator, currentValue) => accumulator.concat(currentValue));
+
+console.log(flattened)`,
+        answer: `[0, 1, 2, 3, 4, 5]`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+cinst countedNames = names.reduce((allNames, name) => { 
+    if (name in allNames) {
+        allNames[name]++;
+  }
+    else {
+        allNames[name] = 1;
+  }
+    return allNames;
+}, {});`,
+        answer: `{ 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }`,
+        mark: null
+      }
+    ]
   }
 ];
