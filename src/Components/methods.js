@@ -758,5 +758,37 @@ cinst countedNames = names.reduce((allNames, name) => {
         mark: null
       }
     ]
+  },
+  {
+    name: "reduceRight()",
+    id: 23,
+    arrayMethodType: "Array.prototype.",
+    hint: `The reduceRight() method applies a function 
+    against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array = [[0, 1], [2, 3], [4, 5]].reduceRight(
+    (accumulator, currentValue) => accumulator.concat(currentValue)
+);
+        
+console.log(array);`,
+        answer: `[4, 5, 2, 3, 0, 1]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const array = ['1', '2', '3', '4', '5']; 
+var left  = array.reduce((prev, cur) => prev + cur ); 
+var right = array.reduceRight(prev, cur => prev + cur ); 
+
+console.log(left); 
+console.log(right);`,
+        answer: `"12345" "54321"`,
+        mark: null
+      }
+    ]
   }
 ];
