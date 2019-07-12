@@ -976,5 +976,95 @@ console.log(numbers);`,
         mark: null
       }
     ]
+  },
+  {
+    name: "splice()",
+    id: 29,
+    arrayMethodType: "Array.prototype.",
+    hint: `The splice() method changes the contents of an array by removing or replacing existing 
+    elements and/or adding new elements 'in place'.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+
+console.log(months);`,
+        answer: `["Jan", "Feb", "March", "April", "June"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+months.splice(4, 1, 'May');
+
+console.log(months);`,
+        answer: `["Jan", "Feb", "March", "April", "May"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const music = ['classical', 'blues', 'rock', 'pop'];
+const removed = music.splice(2, 0, 'dubstep', 'techno');
+
+console.log(music);`,
+        answer: `["classical", "blues", "dubstep", "techno", "rock", "pop"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №4",
+        id: 3,
+        codeExample: `const music = ['classical', 'blues', 'rock', 'pop'];
+const removed = music.splice(2, 1);
+
+console.log(music);`,
+        answer: `["classical", "blues", "pop"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №5",
+        id: 4,
+        codeExample: `const music = ['classical', 'blues', 'rock', 'pop'];
+const removed = music.splice(3, 1, 'electro');
+
+console.log(music);`,
+        answer: `["classical", "blues", "rock", "electro"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №6",
+        id: 5,
+        codeExample: `const music = ['classical', 'blues', 'rock', 'pop'];
+const removed = music.splice(0, 2, 'funk', 'jazz');
+
+console.log(music);`,
+        answer: `["funk", "jazz", "rock", "pop"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №7",
+        id: 6,
+        codeExample: `const music = ['classical', 'blues', 'rock', 'pop'];
+const removed = music.splice(music.length - 3, 2);
+
+console.log(music);`,
+        answer: `["classical", "pop"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №8",
+        id: 7,
+        codeExample: `const music = ['classical', 'blues', 'rock', 'pop'];
+const removed = music.splice(2);
+
+console.log(music);`,
+        answer: `["classical", "blues"]`,
+        mark: null
+      }
+    ]
   }
 ];
