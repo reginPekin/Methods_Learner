@@ -857,5 +857,42 @@ while( (i = names.shift()) !== undefined ) {
         mark: null
       }
     ]
+  },
+  {
+    name: "slice()",
+    id: 26,
+    arrayMethodType: "Array.prototype.",
+    hint: `The slice() method returns a shallow copy of a portion of an array into a new array object 
+    selected from *begin* to *end* (*end* not included). 
+    The original array will not be modified.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));`,
+        answer: `["camel", "duck", "elephant"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2, 4));`,
+        answer: `["camel", "duck"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(1, 5));`,
+        answer: `["bison", "camel", "duck", "elephant"]`,
+        mark: null
+      }
+    ]
   }
 ];
