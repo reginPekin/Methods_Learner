@@ -790,5 +790,33 @@ console.log(right);`,
         mark: null
       }
     ]
+  },
+  {
+    name: "reverse()",
+    id: 24,
+    arrayMethodType: "Array.prototype.",
+    hint: `The reverse() method reverses an array "in place" algorithm. 
+    The first array element becomes the last, and the last array element becomes the first.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = ['one', 'two', 'three'];
+const reversed = array1.reverse(); 
+
+console.log(reversed);`,
+        answer: `["three", "two", "one"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const number = [3, 5, 6, 8]
+        
+console.log(number.reverse())`,
+        answer: `[8, 6, 5, 3]`,
+        mark: null
+      }
+    ]
   }
 ];
