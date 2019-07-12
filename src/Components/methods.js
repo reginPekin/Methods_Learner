@@ -926,12 +926,53 @@ console.log([12, 5, 8, 1, 4].some(x => x > 10)`,
         taskName: "Task №3",
         id: 2,
         codeExample: `const fruits = ['apple', 'banana', 'mango', 'guava'];
-        
+
 const checkAvailability = (arr, val) => arr.some(arrVal => val === arrVal);
 
 console.log(checkAvailability(fruits, 'kela'));   
 console.log(checkAvailability(fruits, 'banana'));`,
         answer: `false true`,
+        mark: null
+      }
+    ]
+  },
+  {
+    name: "sort()",
+    id: 28,
+    arrayMethodType: "Array.prototype.",
+    hint: `The sort() method sorts the elements of an array 'in place' and returns the sorted array. 
+    The default sort order is built upon converting the elements into strings, 
+    then comparing their sequences of UTF-16 code units values.
+
+    The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+
+console.log(array1);`,
+        answer: `[1, 100000, 21, 30, 4]`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);`,
+        answer: `["Dec", "Feb", "Jan", "March"]`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const numbers = [4, 2, 5, 1, 3];
+numbers.sort((a, b) => a - b);
+
+console.log(numbers);`,
+        answer: `[1, 2, 3, 4, 5]`,
         mark: null
       }
     ]
