@@ -1066,5 +1066,34 @@ console.log(music);`,
         mark: null
       }
     ]
+  },
+  {
+    name: "toLocaleString()",
+    id: 30,
+    arrayMethodType: "Array.prototype.",
+    hint: `The toLocaleString() method returns a string representing the elements of the array. 
+    The elements are converted to Strings using their toLocaleString methods and 
+    these Strings are separated by a locale-specific String (such as a comma “,”).`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
+const localeString = array1.toLocaleString('en', {timeZone: "UTC"});
+
+console.log(localeString);`,
+        answer: `"1,a,12/21/1997, 2:12:00 PM"`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const prices = ['￥7', 500, 8123, 12]; 
+
+console.log(prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }));`,
+        answer: `"￥7,￥500,￥8,123,￥12"`,
+        mark: null
+      }
+    ]
   }
 ];
