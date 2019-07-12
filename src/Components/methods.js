@@ -1121,5 +1121,32 @@ console.log(array.toString());`,
         mark: null
       }
     ]
+  },
+  {
+    name: "unshift()",
+    id: 32,
+    arrayMethodType: "Array.prototype.",
+    hint: `The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));`,
+        answer: `5`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const array1 = [1, 2, 3];
+array1.unshift(4, 5);
+
+console.log(array1);`,
+        answer: `[4, 5, 1, 2, 3]`,
+        mark: null
+      }
+    ]
   }
 ];
