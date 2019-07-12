@@ -894,5 +894,46 @@ console.log(animals.slice(1, 5));`,
         mark: null
       }
     ]
+  },
+  {
+    name: "some()",
+    id: 27,
+    arrayMethodType: "Array.prototype.",
+    hint: `The some() method tests whether at least one element 
+    in the array passes the test implemented by the provided function. 
+    It returns a Boolean value.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array = [1, 2, 3, 4, 5];
+
+const even = element => element % 2 === 0;
+
+console.log(array.some(even));`,
+        answer: `true`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `console.log([2, 5, 8, 1, 4].some(x => x > 10)  
+console.log([12, 5, 8, 1, 4].some(x => x > 10)`,
+        answer: `false true`,
+        mark: null
+      },
+      {
+        taskName: "Task №3",
+        id: 2,
+        codeExample: `const fruits = ['apple', 'banana', 'mango', 'guava'];
+        
+const checkAvailability = (arr, val) => arr.some(arrVal => val === arrVal);
+
+console.log(checkAvailability(fruits, 'kela'));   
+console.log(checkAvailability(fruits, 'banana'));`,
+        answer: `false true`,
+        mark: null
+      }
+    ]
   }
 ];
