@@ -1148,5 +1148,25 @@ console.log(array1);`,
         mark: null
       }
     ]
+  },
+  {
+    name: "values()",
+    id: 33,
+    arrayMethodType: "Array.prototype.",
+    hint: `The values() method returns a new **Array Iterator** object that contains the values for each index in the array.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array1 = ['a', 'b', 'c'];
+const iterator = array1.values();
+
+for (const value of iterator) {
+    console.log(value);
+}`,
+        answer: `"a" "b" "c"`,
+        mark: null
+      }
+    ]
   }
 ];
