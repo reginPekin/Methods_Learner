@@ -1095,5 +1095,31 @@ console.log(prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' 
         mark: null
       }
     ]
+  },
+  {
+    name: "toString()",
+    id: 31,
+    arrayMethodType: "Array.prototype.",
+    hint: `The toString() method returns a string representing the specified array and its elements.`,
+    tasks: [
+      {
+        taskName: "Task №1",
+        id: 0,
+        codeExample: `const array = [23, 2.4, 'ab', '1a'];
+
+console.log(array.toString());`,
+        answer: `"1,2,a,1a"`,
+        mark: null
+      },
+      {
+        taskName: "Task №2",
+        id: 1,
+        codeExample: `const array = ['you', 'are', 'so', 'cool', ':', 3];
+
+console.log(array.toString());`,
+        answer: `"you,are,so,cool,:,3"`,
+        mark: null
+      }
+    ]
   }
 ];
