@@ -40,13 +40,7 @@ export const TaskMainContainer = ({
     <main className={styles.taskBoard}>
       <section className={styles.hint}>
         <div className={styles.hintText}>{method.hint}</div>
-        <img
-          className={styles.hintImage}
-          width="30px"
-          height="30px"
-          src={Information}
-          alt="InformativeBlock"
-        />
+        <div className={styles.divHind}>i</div>
       </section>
       <section className={styles.answerBox}>
         <div
