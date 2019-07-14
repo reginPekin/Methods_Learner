@@ -14,7 +14,7 @@ element {
 @font-face {
   font-family: "AdventPro";
 
-  src: url("../style/Fonts/AdventPro-Regular.ttf") format("truetype");
+  src: url("../style/fonts/AdventPro-Regular.ttf") format("truetype");
 
   font-weight: normal;
 
