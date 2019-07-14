@@ -13,6 +13,18 @@
   display: flex;
 }
 
+.divHind {
+  border: var(--dark-blue) solid 2px;
+  border-radius: 100%;
+  padding: 3px 10px 3px 10px;
+  font-size: 0.5;
+}
+
+.divHind:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
 .hint {
   width: 60%;
   height: 4.5%;
