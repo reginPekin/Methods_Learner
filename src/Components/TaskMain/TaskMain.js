@@ -2,18 +2,15 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 
 import { TaskBoard } from "../TaskBoard";
+import { NextTask, PreviousTask } from "../Arrows";
 
-import { changeWinnerDisplay } from "../../Utils/changeWinnerDidplay";
-import { changeLoserDisplay } from "../../Utils/changeLoserDisplay";
-import { changeMark } from "../../Utils/changeMark";
-import { changeTask } from "../../Utils/changeTask";
-import { changeAnswerDisplay } from "../../Utils/changeAnswerDisplay";
+import { changeWinnerDisplay } from "../../actions/changeWinnerDidplay";
+import { changeLoserDisplay } from "../../actions/changeLoserDisplay";
+import { changeMark } from "../../actions/changeMark";
+import { changeTask } from "../../actions/changeTask";
+import { changeAnswerDisplay } from "../../actions/changeAnswerDisplay";
 
 import Information from "../../images/information.png";
-
-// import Arrow from "../../images/arrow.png";
-import Left from "../../images/left-arrow.png";
-import Right from "../../images/right-arrow.png";
 
 import styles from "./TaskMain.module.css";
 
@@ -72,21 +69,13 @@ export const TaskMainContainer = ({
         {method.name}: <span className={styles.taskName}>{task.taskName}</span>
       </div>
       <div className={styles.boardAndButtons}>
-        <section className={styles.nextPrev}>
-          {taskId !== 0 && (
-            <button
-              className={styles.buttonArrow}
-              onClick={() => {
-                dispatch(changeTask(taskId - 1));
-                dispatch(changeWinnerDisplay("none"));
-                dispatch(changeLoserDisplay("none"));
-                dispatch(changeAnswerDisplay(false));
-              }}
-            >
-              <img src={Left} alt="arrow-left" style={{ width: "55px" }} />
-            </button>
-          )}
-        </section>
+        <PreviousTask
+          taskId={taskId}
+          onClick={() => {
+            dispatch(changeTask(taskId - 1));
+          }}
+        />
+
         <div className={styles.taskBoardComponent}>
           <TaskBoard
             task={task}
@@ -118,21 +107,13 @@ export const TaskMainContainer = ({
             }}
           />
         </div>
-        <section className={styles.nextPrev}>
-          {method.tasks[taskId + 1] !== undefined && (
-            <button
-              className={styles.buttonArrow}
-              onClick={() => {
-                dispatch(changeTask(taskId + 1));
-                dispatch(changeWinnerDisplay("none"));
-                dispatch(changeLoserDisplay("none"));
-                dispatch(changeAnswerDisplay(false));
-              }}
-            >
-              <img src={Right} alt="arrow-right" style={{ width: "55px" }} />
-            </button>
-          )}
-        </section>
+        <NextTask
+          method={method}
+          taskId={taskId}
+          onClick={() => {
+            dispatch(changeTask(taskId + 1));
+          }}
+        />
       </div>
     </main>
     // </div>
