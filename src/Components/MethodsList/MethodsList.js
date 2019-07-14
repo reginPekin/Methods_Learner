@@ -6,11 +6,8 @@ import styles from "./MethodsList.module.css";
 import FingerUp from "../../images/fingerUp.png";
 import FingerDown from "../../images/fingerDown.png";
 
-import { changeWinnerDisplay } from "../../Utils/changeWinnerDidplay";
-import { changeLoserDisplay } from "../../Utils/changeLoserDisplay";
-import { changeMethod } from "../../Utils/changeMethod";
-import { changeTask } from "../../Utils/changeTask";
-import { changeAnswerDisplay } from "../../Utils/changeAnswerDisplay";
+import { changeMethod } from "../../actions/changeMethod";
+import { changeTask } from "../../actions/changeTask";
 
 export const MethodsListContainer = ({
   methods,
@@ -53,10 +50,7 @@ export const MethodsListContainer = ({
                       ? setIsClosed(!isClosed)
                       : setIsClosed(true);
                     console.log(openedId);
-                    dispatch(changeWinnerDisplay("none"));
-                    dispatch(changeLoserDisplay("none"));
                     dispatch(changeMethod(method.id));
-                    dispatch(changeAnswerDisplay(false));
                     dispatch(changeTask(0));
                   }}
                 >
@@ -76,9 +70,6 @@ export const MethodsListContainer = ({
                         className={styles.taskSelection}
                         onClick={() => {
                           dispatch(changeTask(task.id));
-                          dispatch(changeWinnerDisplay("none"));
-                          dispatch(changeLoserDisplay("none"));
-                          dispatch(changeAnswerDisplay(false));
                         }}
                       >
                         {task.taskName}
