@@ -4,7 +4,7 @@ export const methodsObject = [
     id: 0,
     arrayMethodType: "Array.",
     hint:
-      "The method creates a new, shallow-copied **Array** instance from an array-like or iterable object",
+      "The from() method creates a new, shallow-copied **Array** instance from an array-like or iterable object",
     tasks: [
       {
         taskName: "Task №1",
@@ -27,7 +27,8 @@ Array.from(set);`,
     name: "isArray()",
     id: 1,
     arrayMethodType: "Array.",
-    hint: "The method determines whether the passed value is an **Array**",
+    hint:
+      "The isArray() method determines whether the passed value is an **Array**",
     tasks: [
       {
         taskName: "Task №1",
@@ -64,7 +65,7 @@ Array.from(set);`,
     name: "of()",
     arrayMethodType: "Array.",
     hint:
-      "The method creates a new **Array** instance from a variable number of arguments, regardless of number or type of the arguments. The difference between **Array.of()** and the **Array** constructor is in the handling of integer arguments: Array.of(7) creates an array with a single element, 7, whereas Array(7) creates an empty array with a length property of 7",
+      "The of() method creates a new **Array** instance from a variable number of arguments, regardless of number or type of the arguments. The difference between **Array.of()** and the **Array** constructor is in the handling of integer arguments: Array.of(7) creates an array with a single element, 7, whereas Array(7) creates an empty array with a length property of 7",
     tasks: [
       {
         taskName: "Task №1",
@@ -93,7 +94,7 @@ Array.from(set);`,
     name: "concat()",
     id: 3,
     arrayMethodType: "Array.prototype.",
-    hint: `The method is used to merge two or more arrays. 
+    hint: `The concat() method is used to merge two or more arrays. 
   This method does not change the existing arrays, 
   but instead returns a new array.`,
     tasks: [
@@ -142,7 +143,7 @@ console.log(numbers); `,
     name: "copyWithin()",
     id: 4,
     arrayMethodType: "Array.prototype.",
-    hint: `The method shallow copies part of an array to another location in the same array and returns it without modifying its length.`,
+    hint: `The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.`,
     tasks: [
       {
         taskName: "Task №1",
@@ -164,7 +165,7 @@ console.log(numbers); `,
     name: "entries()",
     id: 5,
     arrayMethodType: "Array.prototype.",
-    hint: `The method returns a new **Array Iterator** object that contains the key/value pairs for 
+    hint: `The entries method returns a new **Array Iterator** object that contains the key/value pairs for 
   he array.`,
     tasks: [
       {
