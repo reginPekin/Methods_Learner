@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 
 import cx from "classnames";
-//import cx from "classnames";
-// <div className={cx(style.div, style.div2, {[styles.div2]: isCorrect, [styles.div3]: isFalse })}>
 
 import styles from "./InputTask.module.css";
 
