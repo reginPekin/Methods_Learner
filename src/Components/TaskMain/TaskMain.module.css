@@ -63,15 +63,15 @@
 }
 
 .buttonAnswer:hover {
-  border-color: var(red);
-  color: var(red);
+  border-color: var(--red);
+  color: var(--red);
 }
 
 .answerText {
   display: flex;
   padding: 0em 1em 0.3em;
   word-wrap: inherit;
-  color: var(--dark-blue);
+  color: var(--red);
 }
 
 .taskName {
