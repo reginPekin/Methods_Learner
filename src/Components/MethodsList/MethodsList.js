@@ -28,6 +28,7 @@ export const MethodsListContainer = ({
           placeholder="Find method"
           value={text}
           onChange={event => setText(event.target.value)}
+          onFocus={() => setText("")}
         />
       </div>
       <div className={styles.scroll}>
