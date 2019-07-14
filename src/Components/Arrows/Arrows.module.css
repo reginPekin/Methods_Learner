@@ -1,0 +1,11 @@
+.nextPrev {
+  width: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonArrow {
+  border: none;
+  outline: none;
+  padding: 0em;
+}
