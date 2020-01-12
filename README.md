@@ -7,15 +7,15 @@
 </p>
 
 ---
-
+### Project details
 <br/>
 There are a lot of array methods in JS, but searching the method on this site will not be difficult for you:
-<br/>
+
 <p align='middle'>
   <img alt="Search" src="https://i.ibb.co/m9YmXNv/search.gif" width="600px">
 </p>
 
-Here you can see your progress and differrent reaction on answers:
+A few details related to right and wrong answers:
 
 <p align='middle' style = 'backgroundColor: "green"'>
   <img alt='Fingers' src='https://i.ibb.co/5jdW3D1/2020-01-12-17-48-35.png' width='250px'>
@@ -26,7 +26,7 @@ Here you can see your progress and differrent reaction on answers:
   <img alt='Wrong answer' src='https://i.ibb.co/F4GnB2g/lose-1.gif' width='600px'>
 </p>
 
-If you have difficulty with the exercise, you can see a hint or even answer to the task. </br>
+If you'll have difficulty with the exercise, you could see a hint or even an answer to the task. </br>
 
 <p align = "middle">
   <img alt='answers' src='https://i.ibb.co/tm6q4xB/answers.gif' width='600px'>
